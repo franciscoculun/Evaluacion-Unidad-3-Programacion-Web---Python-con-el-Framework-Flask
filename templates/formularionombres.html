@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="/static/css/styles-ejercicios.css">
+    <title>Calcular caracteres</title>
+</head>
+<body>
+<a href="/" class="btn-regresar">Volver al Inicio</a>
+<div class="card">
+  <form method="POST">
+    <label>Nombre 1:</label>
+    <input type="text" name="txtNombre1"><br><br>
+    <label>Nombre 2:</label>
+    <input type="text" name="txtNombre2"><br><br>
+    <label>Nombre 3:</label>
+    <input type="text" name="txtNombre3"><br><br>
+    <input type="submit" value="Enviar">
+  </form>
+  {% if nombre1 is defined and nombre2 is defined and nombre3 is defined %}
+	<p>El nombre con mayor cantidad de caracteres es: {{resultado}}</p>
+	<p>El nombre tiene: {{cant_caracteres}} caracteres</p>
+  {% endif %}
+</div>
+</body>
+</html>

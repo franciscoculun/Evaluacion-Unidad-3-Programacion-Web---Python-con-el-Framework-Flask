@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="/static/css/styles-ejercicios.css">
+    <title>Calcular promedio</title>
+</head>
+<body>
+<a href="/" class="btn-regresar">Volver al Inicio</a>
+<div class="card">
+  <h1>Formulario de Notas</h1>
+  <form method="POST">
+    <label>Nota 1:</label>
+    <input type="number" name="Nota1"><br><br>
+    <label>Nota 2:</label>
+    <input type="number" name="Nota2"><br><br>
+    <label>Nota 3:</label>
+    <input type="number" name="Nota3"><br><br>
+    <label>Asistencia (%):</label>
+    <input type="number" name="Asistencia"><br><br>
+    <input type="submit" value="Enviar">
+  </form>
+  {% if nota1 is defined and nota2 is defined and nota3 is defined and asistencia is defined %}
+
+    {% if promedio is defined %}
+      <p>Promedio: {{promedio}}</p>
+    {% endif %}
+
+    {% if estado is defined %}
+      <p>{{estado}}</p>
+    {% endif %}
+
+    {% if mensaje_notas is defined %}
+      <p>{{mensaje_notas}}</p>
+    {% endif %}
+
+    {% if mensaje_asistencia is defined %}
+      <p>{{mensaje_asistencia}}</p>
+    {% endif %}
+
+  {% endif %}
+</div>
+</body>
+</html>
